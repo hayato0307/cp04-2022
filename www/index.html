@@ -198,7 +198,11 @@
 
         // ButtonAがクリックされた時の処理
         function btnAClick(e) {
-            active = true;
+            if(cState==0){
+                active = true;
+            }else {
+                active2 = true;
+            }
             startTime = new Date();
             $("#btnA").prop("disabled", true);
             $("#btnB").prop("disabled", false);
@@ -207,6 +211,7 @@
         // ButtonBがクリックされた時の処理
         function btnBClick(e) {
             active = false;
+            active2 = false;
             $("#btnB").prop("disabled", true);
             $("#btnA").prop("disabled", false);
         }
@@ -215,14 +220,18 @@
         function btnCClick(e) {
             alarm();
             active = false;
+            active2 = false;
             period = 60 * parseInt($("#minute").val()) + parseInt($("#second").val());
             $("#time").html("経過時間： 0");
-            $("#remain").html("残り時間： " + period);
+            if(cState==0){
+                $("#remain").html("残り時間： " + period);
+            }
 
         }
 
         //ButtonDがクリックされたときの処理
         function btnDClick(e) {
+            active = false;
             if(cState==0){
                 $("#btnC").html("Reset");
                 cState = 1;
@@ -253,7 +262,12 @@
 
         }
 
-
+        function stopWatch() {
+            if(active2){
+                var time = parseInt((new Date() - startTime) / 1000);
+                $("#time").html("経過時間： " + time);
+            }
+        }
     </script>
 </head>
 
