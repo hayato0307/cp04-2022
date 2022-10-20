@@ -235,9 +235,11 @@
             if(cState==0){
                 $("#btnC").html("Reset");
                 cState = 1;
+                $("#remain").html("");
             }else{
                 $("#btnC").html("Set");
                 cState = 0;
+                $("#remain").html("残り時間： " + m + "分" + s + "秒");
             }
         }
 
@@ -266,6 +268,7 @@
             if(active2){
                 var time = parseInt((new Date() - startTime) / 1000);
                 $("#time").html("経過時間： " + time);
+                $("#remain").html("");
             }
         }
     </script>
