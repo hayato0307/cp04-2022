@@ -22,6 +22,13 @@
             }, 500);
         });
 
+        // stopWatch処理
+        $(function() {
+            setInterval(function() {
+                stopWatch();
+            }, 500);
+        });
+
         // ready クリックの処理の登録
         $(function() {
             $('#date').click(function(e) {
