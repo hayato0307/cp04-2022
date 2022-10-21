@@ -48,21 +48,21 @@
     #btnA {
         background-color: yellow;
         color: green;
-        font-size: 20px;
         position:absolute; top:380px; left:2%; width:43%; height:60px; 
     }
     
     #btnB {
-        font-size: 20px;
+        background-color: red;
         position:absolute; top:380px; left:45%; width:25%; height:60px; 
     }
 
     #btnC {
-        font-size: 20px;
+        background-color: rosybrown;
         position:absolute; top:380px; left:70%; width:28%; height:60px; 
     }
 
     #btnD {
+        color: blue;
         font-size: 20px;
         position:absolute; top:500px; left:55%; width:40%;
         height:40px;
@@ -85,7 +85,8 @@
     }
 
     button{
-        color: blue;
+        color: white;
         font-family: Times;
+        font-size: 30px;
         border-radius: 20px;
     }
